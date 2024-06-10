@@ -1,4 +1,4 @@
-import { Provider } from '@angular/core';
+import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 
 import { Idle } from './idle';
 import { IdleExpiry } from './idleexpiry';
@@ -16,3 +16,19 @@ export function provideNgIdle(): Provider[] {
     }
   ];
 };
+
+@NgModule({
+  providers: [LocalStorage]
+})
+export class NgIdleModule {
+  static forRoot(): ModuleWithProviders<NgIdleModule> {
+    return {
+      ngModule: NgIdleModule,
+      providers: [
+        LocalStorageExpiry,
+        { provide: IdleExpiry, useExisting: LocalStorageExpiry },
+        Idle
+      ]
+    };
+  }
+}
