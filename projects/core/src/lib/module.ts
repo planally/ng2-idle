@@ -16,16 +16,3 @@ export function provideNgIdle(): Provider[] {
     }
   ];
 };
-// export class NgIdleModule {
-//   static forRoot(): ModuleWithProviders<NgIdleModule> {
-//     return {
-//       ngModule: NgIdleModule,
-//       providers: [
-//         LocalStorage,
-//         LocalStorageExpiry,
-//         { provide: IdleExpiry, useExisting: LocalStorageExpiry },
-//         Idle
-//       ]
-//     };
-//   }
-// }
