@@ -32,7 +32,7 @@ Please get in touch if you are interested!
 
 ## Demo
 
-Visit https://moribvndvs.github.io/ng2-idle to view a simple example with quick start instructions.
+Visit https://grbsk.github.io/ng2-idle to view a simple example with quick start instructions.
 
 ## Quick start
 
